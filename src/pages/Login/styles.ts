@@ -1,6 +1,7 @@
 // LoginPage.styles.ts
 import styled from 'styled-components';
 
+
 export const LoginPageContainer = styled.div`
   width: 400px;
   height: 300px;
@@ -9,7 +10,7 @@ export const LoginPageContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 300px;
+  margin-top: 250px;
 `;
 
 export const LoginTitle = styled.h1`
@@ -21,14 +22,5 @@ export const LoginForm = styled.form`
   flex-direction: column;
   align-items: center;
 `;
-const BackgroundContainer = styled.div`
-  background-color: #3498db; /* Cor de fundo desejada */
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 
-// Adicione estilos específicos ao LoginTextField e StyledButton, se necessário

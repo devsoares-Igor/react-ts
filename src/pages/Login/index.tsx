@@ -3,10 +3,12 @@ import { useNavigate } from "react-router";
 import LoginTextField from '../../components/Field/InputField';
 import MyButton from '../../components/Button/Button';
 
+import { Image } from "../../components/image/index";
+import fullLogo from '../../assets/image/full.png';
+
 
 import {
   LoginPageContainer,
-  LoginTitle,
   LoginForm,
 } from './styles';
 
@@ -42,7 +44,12 @@ const LoginPage: React.FC = () => {
 
   return (
     <LoginPageContainer>
-      <LoginTitle>Login</LoginTitle>
+      <Image
+        src={fullLogo}
+        alt="logo"
+        width={"200px"}
+      />
+
       <LoginForm>
         <LoginTextField
           label="Nick"
