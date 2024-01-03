@@ -15,42 +15,49 @@ const StyledTextField = styled(TextField)`
 
 interface LoginTextFieldProps {
   label: string;
-  type: 'text' | 'password';
+  type: string;
   placeholder: string;
+  required: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error: string;
 }
 
-const LoginTextField: React.FC<LoginTextFieldProps> = ({ label, type, placeholder }) => {
+const LoginTextField: React.FC<LoginTextFieldProps> = ({ label, type, placeholder, required, value, onChange, error }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleTogglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-
-
   return (
     <StyledTextField
       fullWidth
       label={label}
       placeholder={placeholder}
+      required={required}
       type={showPassword ? 'text' : type}
+      value={value}
+      onChange={onChange}
+      error={Boolean(error)} // Make sure the error prop is treated as a boolean
+
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
             <AccountCircleIcon />
           </InputAdornment>
         ),
-        endAdornment:
-          type === 'password' && (
-            <InputAdornment position="end">
-              {showPassword ? (
-                <VisibilityIcon onClick={handleTogglePasswordVisibility} />
-              ) : (
-                <VisibilityOffIcon onClick={handleTogglePasswordVisibility} />
-              )}
-            </InputAdornment>
-          ),
+        endAdornment: type === 'password' && (
+          <InputAdornment position="end">
+            {showPassword ? (
+              <VisibilityIcon onClick={handleTogglePasswordVisibility} />
+            ) : (
+              <VisibilityOffIcon onClick={handleTogglePasswordVisibility} />
+            )}
+          </InputAdornment>
+        ),
       }}
+      helperText={error} // Display the error message as helper text
     />
   );
 };

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from "./pages/Login/index";
 import Main from "./pages/Main/index";
+import Conversations from './pages/conversations/index';
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,13 @@ const router = createBrowserRouter([
   {
     path: "/main",
     element: <Main />,
+  },
+  {
+    path: "/conversations",
+    element: <Conversations/>
   }
+
+
 ]);
 
 

@@ -21,5 +21,14 @@ export const LoginForm = styled.form`
   flex-direction: column;
   align-items: center;
 `;
+const BackgroundContainer = styled.div`
+  background-color: #3498db; /* Cor de fundo desejada */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 
 // Adicione estilos específicos ao LoginTextField e StyledButton, se necessário
