@@ -24,6 +24,7 @@ export function Image({
   border,
   borderRadius,
   padding,
+  
 }: ImageProps) {
   return (
     <ImageStyle

@@ -6,8 +6,8 @@ import LoginTextField from '../../components/Field/InputField';
 import MyButton from '../../components/Button/Button';
 import { Image } from '../../components/image/index';
 import fullLogo from '../../assets/image/full.png';
-import  AnimatedBackground from '../../components/background/background';
-import { LoginPageContainer, LoginForm } from './styles';
+import AnimatedBackground from '../../components/background/background';
+import { LoginPageContainer, LoginForm, } from './styles';
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -40,7 +40,12 @@ const LoginPage: React.FC = () => {
   return (
     <AnimatedBackground>
       <LoginPageContainer>
-        <Image src={fullLogo} alt="logo" width="200px" />
+          <Image
+            src={fullLogo}
+            alt="logo"
+            width="200px"
+            
+          />
         <LoginForm>
           <LoginTextField
             label="Nick"
@@ -62,9 +67,10 @@ const LoginPage: React.FC = () => {
             error={passwordError}
           />
           <MyButton type="submit" text="Entrar" onClick={handleSubmit} />
+
         </LoginForm>
       </LoginPageContainer>
-      </AnimatedBackground>
+    </AnimatedBackground>
   );
 };
 

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab, { TabProps } from '@mui/material/Tab';
+import { NavStyles } from './styles';
 
 interface LinkTabProps extends TabProps {
   to: string;
@@ -10,7 +11,7 @@ interface LinkTabProps extends TabProps {
 
 function LinkTab(props: LinkTabProps) {
   const { to, label, ...rest } = props;
-  
+
   return (
     <Tab
       component={Link}
@@ -43,17 +44,19 @@ export default function NavTabs() {
   };
 
   return (
-    <Box sx={{ width: '92%', height: '33px' }}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        aria-label="nav tabs"
-        role="navigation"
-      >
-        {tabs.map((tab, index) => (
-          <LinkTab key={index} {...tab} />
-        ))}
-      </Tabs>
-    </Box>
+    <NavStyles>
+      <Box >
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="nav tabs"
+          role="navigation"
+        >
+          {tabs.map((tab, index) => (
+            <LinkTab key={index} {...tab} />
+          ))}
+        </Tabs>
+      </Box>
+    </NavStyles>
   );
 }
