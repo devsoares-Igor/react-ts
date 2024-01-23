@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 
 export const LoginPageContainer = styled.div`
-  width: 400px;
+  width: 300px;
   height: 300px;
-  margin:  auto;
+  margin: auto;
   padding: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;

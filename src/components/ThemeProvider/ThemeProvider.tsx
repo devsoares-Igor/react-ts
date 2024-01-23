@@ -39,7 +39,7 @@ const DackMode: React.FC = () => {
       <main>
         <ToggleButton darkMode={darkMode} onClick={toggleDarkMode}>
           {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
-          Modo de luz
+          Tema
         </ToggleButton>
       </main>
     </ThemeProvider>

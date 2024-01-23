@@ -2,19 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Login from "./pages/Login/index";
 import Main from "./pages/Main/index";
+import AuthLoginFirebase from './pages/Login';
 import Conversations from './pages/conversations/index';
 
 
 const router = createBrowserRouter([
+
   {
     path: "/",
-    element: <Login />,
+    element: <AuthLoginFirebase />,
   },
+ 
   {
     path: "/login",
-    element: <Login />,
+    element: <AuthLoginFirebase />,
   },
   {
     path: "/main",
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/conversations",
-    element: <Conversations/>
+    element: <Conversations />
   }
 
 
@@ -34,3 +36,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
+
+

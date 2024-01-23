@@ -1,5 +1,5 @@
 // src/components/LoginTextField.tsx
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -17,13 +17,12 @@ interface LoginTextFieldProps {
   label: string;
   type: string;
   placeholder: string;
-  required: boolean;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error: string;
 }
 
-const LoginTextField: React.FC<LoginTextFieldProps> = ({ label, type, placeholder, required, value, onChange, error }) => {
+const LoginTextField: React.FC<LoginTextFieldProps> = ({ label, type, placeholder, value, onChange, error }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleTogglePasswordVisibility = () => {
@@ -35,7 +34,7 @@ const LoginTextField: React.FC<LoginTextFieldProps> = ({ label, type, placeholde
       fullWidth
       label={label}
       placeholder={placeholder}
-      required={required}
+
       type={showPassword ? 'text' : type}
       value={value}
       onChange={onChange}

@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab, { TabProps } from '@mui/material/Tab';
 import { NavStyles } from './styles';
 
+
 interface LinkTabProps extends TabProps {
   to: string;
 }

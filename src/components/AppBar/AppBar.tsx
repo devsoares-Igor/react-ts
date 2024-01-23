@@ -20,7 +20,7 @@ import { useNavigate } from "react-router";
 import NavTabs from '../navigation/navigation';
 
 import { AvatarStyles } from './styles';
-import DackMode from '../ThemeProvider/ThemeProvider';
+
 
 
 
@@ -43,8 +43,7 @@ export default function MenuAppBar() {
 
     return (
         <Box sx={{ flexGrow: 0 }} >
-            
-            
+    
             <AppBar position="fixed" color="inherit">
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -74,19 +73,21 @@ export default function MenuAppBar() {
                                 open={Boolean(anchorEl)}
                                 onClose={handleClose}
                             >
-                                <DackMode/>
-                                <MenuItem onClick={handleClose}>Configuração</MenuItem>
+                            
+                                <MenuItem onClick={handleClose}>Configuração </MenuItem>
                                 <MenuItem onClick={handleGoBack}>Sair</MenuItem>
                                 
                             </Menu>
                         </div>
                     )}
-                    <AvatarStyles>
+                    <AvatarStyles>    
                         <Avatar sx={{ bgcolor: deepPurple[700] }} onClick={handleMenu}>IG</Avatar>
                     </AvatarStyles>
 
                 </Toolbar>
             </AppBar>
+            
         </Box>
+        
     );
 }
