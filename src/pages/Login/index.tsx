@@ -13,7 +13,15 @@ import { LoginPageContainer, LoginForm } from './styles';
 
 // Firebase configuration
 
-credencial 
+const firebaseConfig = {
+    apiKey: "AIzaSyAAu1sQLO69Rid27K_OvICRL1GCLSBuOTA",
+    authDomain: "real-82320.firebaseapp.com",
+    projectId: "real-82320",
+    storageBucket: "real-82320.appspot.com",
+    messagingSenderId: "571178950004",
+    appId: "1:571178950004:web:30e69820b7612061d62021",
+    measurementId: "G-1KGBKEHV3K"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

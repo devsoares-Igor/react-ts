@@ -4,9 +4,11 @@ import MenuAppBar from '../../components/AppBar/AppBar';
 
 const MainPage: React.FC = () => {
   return (
-   <MenuAppBar/>
+    <>
+      <MenuAppBar />
+
+    </>
   );
 }
 
-
-export default MainPage
+export default MainPage;

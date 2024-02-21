@@ -22,8 +22,6 @@ import NavTabs from '../navigation/navigation';
 import { AvatarStyles } from './styles';
 
 
-
-
 export default function MenuAppBar() {
     const [auth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
